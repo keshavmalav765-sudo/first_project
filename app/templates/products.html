@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     {% include "hedar.html" %}
+   <h1>Product List</h1>
+
+
+{% for product in products %}
+
+    <h3>{{ product.name | safe}}</h3>
+
+    <p>Price: {{ product.price }}</p>
+    <p>stok: {{product.stok}}</p>
+
+{% endfor %}
+{% for student in students  %}
+<h3> {{ student.name }}</h3>
+<p>course: {{ student.course }}</p>
+<p> age:  {{  student.age }}</p>
+<p>city: {{student.city}}
+{% endfor %}
+<form method="GET">
+
+    <input type="text" name="search" placeholder="Search Product">
+
+    <button type="submit">
+        Search
+    </button>
+
+</form>
+</body>
+</html>

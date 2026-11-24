@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Account</title>
+</head>
+<body>
+    {% include "hedar.html" %}
+
+    <h2>📝 Create New Account</h2>
+    
+    <!-- method="POST" लिखना जरूरी है ताकि डेटा छुपकर सर्वर पर जाए -->
+    <form method="POST">
+        {% csrf_token %} <!-- Django का सिक्योरिटी पास, इसके बिना एरर आएगा -->
+        
+        <label>Username:</label>
+        <input type="text" name="username" placeholder="Choose Username" required><br><br>
+        
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Create Password" required><br><br>
+        <label for="">email:</label>
+        <input type="text" name="email" placeholder="enter your email" id=""><br><br>
+        
+        <button type="submit">Register Now</button>
+    </form>
+    {% include "footer.html" %}
+
+</body>
+</html>

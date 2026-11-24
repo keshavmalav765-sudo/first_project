@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="/static/css/contact.css">
+</head>
+<body>
+    {% include "hedar.html" %}
+
+<main>
+
+    <h1>Contact Us</h1>
+
+    <form>
+
+        <label>Full Name</label><br>
+        <input type="text" placeholder="Enter your name"><br><br>
+
+        <label>Email</label><br>
+        <input type="email" placeholder="Enter your email"><br><br>
+
+        <label>Phone</label><br>
+        <input type="tel" placeholder="Enter your phone number"><br><br>
+
+        <label>Message</label><br>
+        <textarea rows="6" cols="40"></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+</main>
+{% include "footer.html" %}
+
+</body>
+</html>

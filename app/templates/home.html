@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+{% include "hedar.html" %}
+    
+    <main>
+
+        <section>
+            <h2>Home</h2>
+            <p>
+                Welcome to our website. This is the home page of our Django project.
+                Here you can learn Django and build amazing web applications.
+            </p>
+
+            <button>Get Started</button>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Our Features</h2>
+
+            <ul>
+                <li>Easy to Use</li>
+                <li>Fast Performance</li>
+                <li>Secure Website</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Latest News</h2>
+
+            <article>
+                <h3>Django Practice Project</h3>
+                <p>
+                    We are learning Django step by step using real-world projects.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <hr>
+
+   
+    <script src="/static/css/home.js"></script>
+
+</body>
+{% include "footer.html" %}
+</html>

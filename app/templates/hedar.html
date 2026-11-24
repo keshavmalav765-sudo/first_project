@@ -1,0 +1,49 @@
+
+<header>
+
+        <h1>Welcome to My Django Website</h1>
+
+        <nav>
+            <a href="/">Home</a> |
+            <a href="{% url 'about' %}">About</a> |
+            <a href="{% url 'services' %}">services</a> |
+            <a href="{% url 'contact' %}">Contact</a> |
+            <a href="{% url 'ragister' %}">Register</a>|
+            <a href="{% url 'login'%}"> LOGIN</a>
+            
+        </nav>
+
+        <hr>
+    </header>
+<style>
+    
+
+header{
+    background:#0d6efd;
+    padding:20px;
+    text-align:center;
+}
+
+header h1{
+    color:white;
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    margin:0 15px;
+}
+
+nav a:hover{
+    color:yellow;
+    text-decoration:underline;
+}
+</style>

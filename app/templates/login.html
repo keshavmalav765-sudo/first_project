@@ -1,0 +1,20 @@
+<marquee behavior="" direction="" onmouseover="stop()" onmouseout="start()">
+    {%for i in des %}
+     <a href="">{{i.title}}</a>
+    {% endfor %}
+</marquee>
+
+{% include "hedar.html" %}
+<h2>Login</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Username</label>
+    <input type="text" name="username" required><br><br>
+
+    <label>Password</label>
+    <input type="password" name="password" required><br><br>
+
+    <button type="submit">Login</button>
+</form>
