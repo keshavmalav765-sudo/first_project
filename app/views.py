@@ -4,6 +4,7 @@ from .models import product,user
 from news.models import news
 from django.contrib.auth.hashers import make_password,check_password
 from django.contrib.auth import login
+from django.views.generic import ListView
 
 # Create your views here.
 
@@ -22,17 +23,25 @@ def contact(request):
     return render(request,'contact.html')
 
 
-def product_det(request):
-        search=request.GET.get("search")
+# def product_det(request):
+#         search=request.GET.get("search")
+#         if search:
+#             products=product.objects.filter(name__icontains=search)
+#         else:
+#             products=product.objects.all().order_by("-name")
+#         return render(request,"products.html",{
+#             "products": products
+#         })
+class product_det(ListView):
+    model=product
+    template_name="products.html"
+    context_object_name="products" 
+    
+    def get_queryset(self):
+        search=self.request.GET.get("search")
         if search:
-            products=product.objects.filter(name__icontains=search)
-        else:
-            products=product.objects.all().order_by("-name")
-        return render(request,"products.html",{
-            "products": products
-        })
-        
-        
+            return product.objects.filter(name__icontains=search)     
+        return product.objects.all()
 
     
 # def ragister_det(request):

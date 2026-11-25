@@ -25,7 +25,7 @@ urlpatterns = [
     path('about/',views.about,name="about"),
     path('services/',views.services,name="services"),
     path('contact/',views.contact,name="contact"),
-    path('product/',views.product_det),
+    path('product/',views.product_det.as_view()),
     path('ragister/',views.user_det,name="ragister"),
     path('login/',views.login_view, name="login"),
     path('des/',views.news_des),
